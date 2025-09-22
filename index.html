@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dock 9 – Warren, PA</title>
+<meta name="description" content="Dock 9 in Warren, PA. Stone-fired pizzas, smash burgers, paninis, bowls, appetizers, soup & salad, ice cream, shakes, and soft drinks."/>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; background:#0f172a; color:#f8fafc; }
+  header { background:#0b1329e0; position:sticky; top:0; z-index:1000; border-bottom:1px solid #23304d; }
+  nav { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; }
+  .logo { font-weight:700; }
+  nav a { color:#f8fafc; text-decoration:none; margin-left:1rem; font-weight:600; }
+  nav a:hover { color:#0ea5a4; }
+  section { padding:2rem 1rem; max-width:1200px; margin:auto; }
+  h1,h2,h3 { margin:0 0 .75rem 0; }
+  h1 { font-size:2rem; }
+  h2 { font-size:1.4rem; color:#e2e8f0; }
+  h3 { font-size:1.05rem; color:#e5e7eb; }
+  p { color:#cbd5e1; }
+  .hero { background:linear-gradient(180deg, #121b39, #0f172a); text-align:center; padding:4rem 1rem; border-radius:12px; margin-top:1rem; }
+  .btn { display:inline-block; background:#0ea5a4; color:#062d2c; font-weight:700; padding:.7rem 1rem; border-radius:8px; text-decoration:none; margin-top:1rem; }
+  .btn:hover { filter:brightness(1.1); }
+  .card { background:#111827; border:1px solid #23304d; border-radius:12px; padding:1rem; margin-bottom:2rem; }
+  .menu-category { margin:1.5rem 0; }
+  .menu-item { display:grid; grid-template-columns:1fr auto; gap:.25rem 1rem; padding:.6rem 0; border-bottom:1px dashed #1f2a44; }
+  .menu-item:last-child { border-bottom:none; }
+  .item-name { font-weight:700; color:#e5e7eb; }
+  .item-desc { grid-column:1/-1; font-size:.95rem; }
+  .price { color:#a7f3d0; font-weight:700; white-space:nowrap; }
+  footer { background:#0b1329; color:#cbd5e1; text-align:center; padding:1.25rem; margin-top:2rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Dock 9</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+    </div>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Welcome to Dock 9</h1>
+  <p>Stone‑fired pizzas, smash burgers, bowls, paninis, and ice cream — right on the river in Warren, PA.</p>
+  <a href="#menu" class="btn">View Menu</a>
+</section>
+
+<section id="menu">
+  <h1>Our Menu</h1>
+
+  <!-- Specialty Pizzas -->
+  <div class="card">
+    <h2>Specialty Pizzas</h2>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">Classic Margherita</div><div class="price">$12.95</div><div class="item-desc">Fresh red sauce, fresh mozzarella, fresh basil</div></div>
+      <div class="menu-item"><div class="item-name">Back Deck BBQ</div><div class="price">$13.95</div><div class="item-desc">Red onion, cheddar, tangy BBQ, diced grilled chicken, fresh mozzarella</div></div>
+      <div class="menu-item"><div class="item-name">Sweet &amp; Spicy</div><div class="price">$13.95</div><div class="item-desc">Sweet chili sauce, red onion, cheddar, pepperoni, pickled hot honey drizzle</div></div>
+      <div class="menu-item"><div class="item-name">Cali White</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, mozzarella, tomatoes, grilled chicken, fresh basil</div></div>
+      <div class="menu-item"><div class="item-name">Rubens</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, sauerkraut, mozzarella, pastrami</div></div>
+      <div class="menu-item"><div class="item-name">PBR</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, cheddar, mozzarella, pickles, pastrami</div></div>
+      <div class="menu-item"><div class="item-name">Buffalo Chicken</div><div class="price">$13.95</div><div class="item-desc">Garlic cream or blue cheese base, mozzarella, cheddar, grilled chicken, buffalo sauce drizzle</div></div>
+      <div class="menu-item"><div class="item-name">GF Veggie Flatbread</div><div class="price">$13.95</div><div class="item-desc">Garlic cream or red sauce, spinach, onions, tomatoes, olives, mushrooms, mozzarella</div></div>
+    </div>
+  </div>
+
+  <!-- Build Your Own Pizza -->
+  <div class="card">
+    <h2>Build Your Own Pizza</h2>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">Base Options</div><div class="price">$12.95</div><div class="item-desc">Red sauce, Pesto, Garlic cream</div></div>
+      <div class="menu-item"><div class="item-name">Cheese Options</div><div class="item-desc">Shredded, Mozzarella</div></div>
+      <div class="menu-item"><div class="item-name">Proteins</div><div class="item-desc">Grilled chicken, Pastrami, Pepperoni, Bacon, Italian Sausage, Pulled Pork, Ham, Smoked Pulled Pork, Sausage</div></div>
+      <div class="menu-item"><div class="item-name">Veggies</div><div class="item-desc">Red onion, Spinach, Mushrooms, Pickles, Tomatoes, Olives, Sauerkraut, Jalapeños</div></div>
+    </div>
+  </div>
+  <!-- Appetizers -->
+  <div class="card">
+    <h2>Appetizers</h2>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">Street Corn Dip</div><div class="price">$9.95</div><div class="item-desc">Char‑grilled sweet corn, cream cheese, cheddar, spices, tortilla chips</div></div>
+      <div class="menu-item"><div class="item-name">Jumbo Brewhouse Pretzel</div><div class="price">$11.95</div><div class="item-desc">Served with beer cheese and mustard</div></div>
+      <div class="menu-item"><div class="item-name">Hot Pepper Cheese Balls</div><div class="price">$6.95</div><div class="item-desc">With ranch</div></div>
+      <div class="menu-item"><div class="item-name">Fried Pickle Spears</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
+      <div class="menu-item"><div class="item-name">Jalapeño Poppers</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
+      <div class="menu-item"><div class="item-name">Fried Banana Pepper Rings</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
+      <div class="menu-item"><div class="item-name">Polish Wings</div><div class="price">$7.95</div><div class="item-desc">Grilled Polish sausage tossed in your sauce</div></div>
+      <div class="menu-item"><div class="item-name">Southwest Artichoke Dip</div><div class="price">$8.95</div><div class="item-desc">Cream cheese, artichoke hearts, southwest spices, tortilla chips</div></div>
+      <div class="menu-item"><div class="item-name">Chicken Lips</div><div class="price">$8.95</div><div class="item-desc">Boneless chicken: dry ranch, cajun, salt &amp; vinegar, BBQ, garlic parm, hot buffalo, Nashville hot</div></div>
+      <div class="menu-item"><div class="item-name">Chicken Lips (3) &amp; Small Fries</div><div class="price">$6.95</div></div>
+      <div class="menu-item"><div class="item-name">Hot Honey Chicken Lips</div><div class="price">$8.95</div><div class="item-desc">Nashville hot, hot honey drizzle, fried onions</div></div>
+    </div>
+  </div>
+
+  <!-- Smash Burgers -->
+  <div class="card">
+    <h2>Smash Burgers</h2>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">The Dock</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, American cheese, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+      <div class="menu-item"><div class="item-name">Allegheny National Forage (ANF)</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+      <div class="menu-item"><div class="item-name">Conneaut Crunch</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried banana peppers, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+      <div class="menu-item"><div class="item-name">Kinzua Kick</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, Nashville hot chicken lip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+      <div class="menu-item"><div class="item-name">Southern Comfort</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried pickle spears, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+      <div class="menu-item"><div class="item-name">Street Corn Quesadilla Burger</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, street corn dip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+      <div class="menu-item"><div class="item-name">The Lumberjack</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried egg, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+      <div class="menu-item"><div class="item-name">The Bridge Buster</div><div class="price">$16.95</div><div class="item-desc">Three bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+    </div>
+  </div>
+
+  <!-- Paninis & More -->
+  <div class="card">
+    <h2>Paninis &amp; More</h2>
+    <p>Served with house fried chips. Upgrade: fries +$1.00 • onion rings +$1.75 • side salad +$2.00</p>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">Ultimate Grilled Cheese</div><div class="price">$13.95</div></div>
+      <div class="menu-item"><div class="item-name">Chicken Bacon Ranch</div><div class="price">$14.95</div></div>
+      <div class="menu-item"><div class="item-name">Brisket Cheesesteak</div><div class="price">$15.95</div></div>
+      <div class="menu-item"><div class="item-name">Club 3</div><div class="price">$13.95</div></div>
+      <div class="menu-item"><div class="item-name">Reuben</div><div class="price">$14.95</div></div>
+      <div class="menu-item"><div class="item-name">Battered Fish Wrap</div><div class="price">$13.95</div></div>
+      <div class="menu-item"><div class="item-name">Caprese Panini</div><div class="price">$12.95</div></div>
+      <div class="menu-item"><div class="item-name">Nashville Hot Chicken Wrap</div><div class="price">$12.95</div></div>
+      <div class="menu-item"><div class="item-name">Southwest Veggie Wrap</div><div class="price">$12.95</div></div>
+    </div>
+  </div>
+
+  <!-- Sides -->
+  <div class="card">
+    <h2>Sides</h2>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">House Fried Chips</div><div class="price">$3.45</div></div>
+      <div class="menu-item"><div class="item-name">Fries</div><div class="price">$4.45</div></div>
+      <div class="menu-item"><div class="item-name">Onion Rings</div><div class="price">$5.45</div></div>
+      <div class="menu-item"><div class="item-name">Side Salad</div><div class="price">$5.45</div></div>
+    </div>
+  </div>
+  <!-- Kid's Kove -->
+  <div class="card">
+    <h2>Kid's Kove</h2>
+    <p>All kids’ meals are served with fries and a drink.</p>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">Chicken Tenders (2)</div><div class="price">$7.95</div></div>
+      <div class="menu-item"><div class="item-name">Grilled Cheese</div><div class="price">$7.95</div></div>
+      <div class="menu-item"><div class="item-name">Cheeseburger</div><div class="price">$7.95</div></div>
+      <div class="menu-item"><div class="item-name">1/4 lb. Burger w/ American Cheese</div><div class="price">$8.95</div></div>
+    </div>
+  </div>
+
+  <!-- Desserts & Ice Cream -->
+  <div class="card">
+    <h2>Desserts &amp; Ice Cream</h2>
+    <div class="menu-category">
+      <div class="item-name">Hershey's Hard Ice Cream</div>
+      <div class="item-desc">One Scoop $3.50, Two Scoops $4.50, Three Scoops $5.50, Pint $6.00, Quart $9.00</div>
+      <div class="item-name">Soft Serve</div>
+      <div class="item-desc">Vanilla, Chocolate, Twist — Baby $2.00, Small $3.00, Medium $4.00, Large $5.00, Pint $6.00, Quart $9.00</div>
+      <div class="menu-item"><div class="item-name">The Avenue Milkshake</div><div class="price">$10.00</div><div class="item-desc">Hershey Ice Cream, toppings, whipped cream, cherry</div></div>
+      <div class="menu-item"><div class="item-name">Sasquatch River Float</div><div class="price">$6.00</div><div class="item-desc">Soft serve with any fountain drink (16oz)</div></div>
+      <div class="menu-item"><div class="item-name">Kinzua Kraze Sundae</div><div class="price">$6.00</div><div class="item-desc">Soft serve, one topping, whipped cream, cherry</div></div>
+      <div class="menu-item"><div class="item-name">Lake Effect Flurries</div><div class="price">$5.50 / $6.50</div><div class="item-desc">Small / Large — mix-ins: Heath, Toffee, Kit-Kat, M&amp;M's, Reese's Pieces, Butterfinger, Oreo, Cookie Dough, Peanut Butter Cup, and more</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <h1>Order Online</h1>
+  <p>Place your order directly through our secure online ordering system. Orders go straight to our kitchen via our Lavu POS — fresh, fast, and ready when you arrive.</p>
+
+  <!-- Embedded ordering interface -->
+  <div style="border:1px solid #23304d; border-radius:8px; overflow:hidden; max-width:100%; height:800px; background:#fff;">
+    <iframe 
+      src="https://YOUR-LAVU-ORDERING-LINK-HERE" 
+      style="width:100%; height:100%; border:0;" 
+      title="Dock 9 Online Ordering">
+    </iframe>
+  </div>
+
+  <!-- Direct link button -->
+  <p style="margin-top:1rem; text-align:center;">
+    <a href="https://YOUR-LAVU-ORDERING-LINK-HERE" target="_blank" rel="noopener" class="btn">
+      Start Your Order
+    </a>
+  </p>
+</section>
+
+<section id="about">
+  <h1>About Us</h1>
+  <p>Dock 9 is a local favorite in Warren, PA, serving up stone‑fired pizzas, juicy smash burgers, fresh salads, and indulgent desserts. We pride ourselves on fresh ingredients, friendly service, and a welcoming atmosphere right on the river.</p>
+</section>
+
+<section id="visit">
+  <h1>Visit Us</h1>
+  <p><strong>Address:</strong> 1101 Pennsylvania Avenue West, Warren, PA 16365</p>
+  <p><strong>Phone:</strong> (814) 230‑9126</p>
+  <p><strong>Hours:</strong> Mon‑Thu 10:30am‑9pm, Fri‑Sat 10:30am‑10pm, Sun 4pm‑9pm</p>
+  <p><a href="https://maps.google.com/?q=1101+Pennsylvania+Avenue+West,+Warren,+PA+16365" target="_blank" class="btn">View on Google Maps</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Dock 9 – Warren, PA
+</footer>
+
+</body>
+</html>
