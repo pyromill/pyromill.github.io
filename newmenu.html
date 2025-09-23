@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+  .menu-content { display: none; }
+  .menu-content.show { display: block; }
+</style>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Dock 9 – Warren, PA</title>
@@ -88,6 +92,13 @@
       </div>
     </div>
   </details>
+<button id="value-menu-toggle" aria-expanded="false">
+  🍽 View Dock 9 Value Menu
+</button>
+
+<div class="menu-content">
+  <!-- Your menu grid here -->
+</div>
 <section id="value-menu" style="background:#fff8f0;padding:1.5rem;font-family:sans-serif;">
   <h2 style="text-align:center;color:#b33a2f;margin-bottom:1rem;">
     🚤 Dock 9 Value Menu — Fast, Fresh, Affordable
@@ -327,6 +338,18 @@ document.querySelectorAll('a[href="#menu"]').forEach(link => {
     menuSection.scrollIntoView({ behavior: 'smooth' });
   });
 });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('value-menu-toggle');
+    const menuContent = document.querySelector('.menu-content');
+
+    toggleBtn.addEventListener('click', () => {
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', !expanded);
+      menuContent.classList.toggle('show');
+    });
+  });
 </script>
 
 </body>
