@@ -37,6 +37,38 @@
   details { margin-bottom: 1rem; }
   summary { font-weight: bold; font-size: 1.2rem; cursor: pointer; }
 </style>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Hero section with background image */
+    .hero {
+      background-image: url('https://www.dock9warren.com/burgernfrieslow.png');
+      background-size: cover;       /* scales image to fill */
+      background-position: center;  /* keeps it centered */
+      background-repeat: no-repeat; /* no tiling */
+      height: 100vh;                /* full viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      background: rgba(0,0,0,0.5);  /* dark overlay for readability */
+      padding: 1rem 2rem;
+      border-radius: 8px;
+    }
+@media (max-width: 600px) {
+  .hero {
+    background-image: url('https://www.dock9warren.com/burgernfrieslow.jpg');
+  }
+}
+
+  </style>
 </head>
 <body>
 
