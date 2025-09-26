@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-  .menu-content { display: none; }
-  .menu-content.show { display: block; }
-</style>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dock 9 – Warren, PA</title>
-<meta name="description" content="Dock 9 in Warren, PA. Stone-fired pizzas, smash burgers, paninis, bowls, appetizers, soup & salad, ice cream, shakes, and soft drinks."/>
-<meta name="theme-color" content="#0f172a">
-<style>
-  body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; background:#0f172a; color:#f8fafc; }
-  header { background:#0b1329e0; position:sticky; top:0; z-index:1000; border-bottom:1px solid #23304d; }
-  nav { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; }
-  .logo { font-weight:700; }
-  nav a { color:#f8fafc; text-decoration:none; margin-left:1rem; font-weight:600; }
-  nav a:hover { color:#0ea5a4; }
-  section { padding:2rem 1rem; max-width:1200px; margin:auto; }
-  h1,h2,h3 { margin:0 0 .75rem 0; }
-  h1 { font-size:2rem; }
-  h2 { font-size:1.4rem; color:#e2e8f0; }
-  h3 { font-size:1.2rem; color:#e5e7eb; }
-  p { color:#cbd5e1; }
-  .hero { background:linear-gradient(180deg, #121b39, #0f172a); text-align:center; padding:4rem 1rem; border-radius:12px; margin-top:1rem; }
-  .btn { display:inline-block; background:#0ea5a4; color:#062d2c; font-weight:700; padding:.7rem 1rem; border-radius:8px; text-decoration:none; margin-top:1rem; }
-  .btn:hover { filter:brightness(1.1); }
-  .card { background:#111827; border:1px solid #23304d; border-radius:12px; padding:1rem; margin-bottom:2rem; }
-  .menu-category { margin:1.5rem 0; }
-  .menu-item { display:grid; grid-template-columns:1fr auto; gap:.25rem 1rem; padding:.6rem 0; border-bottom:1px dashed #1f2a44; }
-  .menu-item:last-child { border-bottom:none; }
-  .item-name { font-weight:700; color:#e5e7eb; }
-  .item-desc { grid-column:1/-1; font-size:.95rem; }
-  .price { color:#a7f3d0; font-weight:700; white-space:nowrap; }
-  footer { background:#0b1329; color:#cbd5e1; text-align:center; padding:1.25rem; margin-top:2rem; }
-  details { margin-bottom: 1rem; }
-  summary { font-weight: bold; font-size: 1.2rem; cursor: pointer; }
-</style>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dock 9 – Warren, PA</title>
+  <meta name="description" content="Dock 9 in Warren, PA. Stone-fired pizzas, smash burgers, paninis, bowls, appetizers, soup & salad, ice cream, shakes, and soft drinks."/>
+  <meta name="theme-color" content="#0f172a">
 
-    /* Hero section with background image */
+  <style>
+    /* Base layout */
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; background:#0f172a; color:#f8fafc; }
+    header { background:#0b1329e0; position:sticky; top:0; z-index:1000; border-bottom:1px solid #23304d; }
+    nav { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; }
+    .logo { font-weight:700; }
+    nav a { color:#f8fafc; text-decoration:none; margin-left:1rem; font-weight:600; }
+    nav a:hover { color:#0ea5a4; }
+    section { padding:2rem 1rem; max-width:1200px; margin:auto; }
+    h1,h2,h3 { margin:0 0 .75rem 0; }
+    h1 { font-size:2rem; }
+    h2 { font-size:1.4rem; color:#e2e8f0; }
+    h3 { font-size:1.2rem; color:#e5e7eb; }
+    p { color:#cbd5e1; }
+    .btn { display:inline-block; background:#0ea5a4; color:#062d2c; font-weight:700; padding:.7rem 1rem; border-radius:8px; text-decoration:none; margin-top:1rem; }
+    .btn:hover { filter:brightness(1.1); }
+    .card { background:#111827; border:1px solid #23304d; border-radius:12px; padding:1rem; margin-bottom:2rem; }
+    .menu-category { margin:1.5rem 0; }
+    .menu-item { display:grid; grid-template-columns:1fr auto; gap:.25rem 1rem; padding:.6rem 0; border-bottom:1px dashed #1f2a44; }
+    .menu-item:last-child { border-bottom:none; }
+    .item-name { font-weight:700; color:#e5e7eb; }
+    .item-desc { grid-column:1/-1; font-size:.95rem; }
+    .price { color:#a7f3d0; font-weight:700; white-space:nowrap; }
+    footer { background:#0b1329; color:#cbd5e1; text-align:center; padding:1.25rem; margin-top:2rem; }
+    details { margin-bottom: 1rem; }
+    summary { font-weight: bold; font-size: 1.2rem; cursor: pointer; }
+
+    /* Hero banner with overlay and stacked text boxes */
     .hero {
-      background-image: url('https://www.dock9warren.com/img/burgernfrieslow.jpg');
-      background-size: 50%;       /* scales image */
-      background-position: center;  /* keeps it centered */
-      background-repeat: no-repeat; /* no tiling */
-      height: 100vh;                /* full viewport height */
+      background: url('https://www.dock9warren.com/img/burgerban.jpg') center/cover no-repeat;
+      height: 400px;               /* banner height */
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
+      position: relative;
+      color: #fff;
+      border-radius: 12px;
+      margin-top: 1rem;
     }
-
-    .hero h1 {
-      background: rgba(0,0,0,0.5);  /* dark overlay for readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,50,0,0.2); /* overlay improves readability */
+      border-radius: 12px;
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;      /* stack heading and tagline */
+      gap: 1rem;
+      align-items: center;
+      z-index: 1;                  /* above overlay */
+      max-width: 900px;
+      padding: 0 1rem;
+    }
+    .hero h1,
+    .hero .tagline {
+      background: rgba(0,0,0,0.6); /* semi-transparent boxes */
       padding: 1rem 2rem;
       border-radius: 8px;
+      margin: 0;
+      max-width: 90%;
     }
-@media (max-width: 600px) {
-  .hero {
-    background-image: url('https://www.dock9warren.com/img/burgernfrieslow.jpg');
-  }
-}
+    .hero h1 { font-size: 2rem; font-weight: 700; }
+    .hero .tagline { font-size: 1.1rem; font-weight: 400; }
 
+    /* Optional: mobile tweaks */
+    @media (max-width: 600px) {
+      .hero { height: 320px; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero .tagline { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -84,11 +96,13 @@
 </header>
 
 <section id="home" class="hero">
-  <h1>Dock 9 – Warren, PA</h1>
-  <p>Stone‑fired pizzas, smash burgers, bowls, paninis, and ice cream — right on the river in Warren, PA.</p>
+  <div class="hero-text">
+    <h1>Dock 9 – Warren, PA</h1>
+    <p class="tagline">
+      Stone‑fired pizzas, smash burgers, bowls, paninis, and ice cream — right on the river in Warren, PA.
+    </p>
+  </div>
 </section>
-
-
 
 <section id="order">
   <h2>Order Online</h2>
@@ -108,7 +122,6 @@
   </p>
 </section>
 
-<!-- River Cam Section -->
 <section id="river-cam" style="padding: 2rem 1rem; max-width: 960px; margin: 0 auto;">
   <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">Our River View</h2>
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -126,7 +139,7 @@
 
 <section id="about">
   <h2>About Us</h2>
-  <p>Dock 9 is a local favorite in Warren, PA, serving up stone‑fired pizzas, juicy smash burgers, fresh salads, and indulgent desserts including Hershey's hard Ice Creams and Titusville Dairy soft serve. We pride ourselves on fresh twists to old classics, friendly service, and a welcoming atmosphere right on the river.</p>
+  <p>Dock 9 is a local favorite in Warren, PA, serving up stone‑fired pizzas, juicy smash burgers, fresh salads, and indulgent desserts including Hershey's hard ice cream and Titusville Dairy soft serve. We pride ourselves on fresh twists to old classics, friendly service, and a welcoming atmosphere right on the river.</p>
 </section>
 
 <section id="visit">
@@ -141,31 +154,7 @@
   &copy; 2025 Dock 9 – Warren, PA
 </footer>
 
-<script>
-document.querySelectorAll('a[href="#menu"]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const menuSection = document.getElementById('menu');
-    const details = menuSection.querySelectorAll('details');
-    const allOpen = Array.from(details).every(d => d.open);
-    details.forEach(d => d.open = !allOpen);
-    link.setAttribute('aria-expanded', !allOpen);
-    menuSection.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('value-menu-toggle');
-    const menuContent = document.querySelector('.menu-content');
-
-    toggleBtn.addEventListener('click', () => {
-      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      toggleBtn.setAttribute('aria-expanded', !expanded);
-      menuContent.classList.toggle('show');
-    });
-  });
-</script>
+<!-- Removed unused JS that referenced #menu and #value-menu-toggle -->
 
 </body>
 </html>
