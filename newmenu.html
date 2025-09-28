@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dock 9 – Warren, PA</title>
-  <meta name="description" content="Dock 9 in Warren, PA. Stone-fired pizzas, smash burgers, paninis, bowls, appetizers, soup & salad bar, ice cream, shakes, and soft drinks."/>
+  <title>Dock 9 – Menu</title>
+  <meta name="description" content="Dock 9 in Warren, PA. Full menu including stone-fired pizzas, smash burgers, bowls, paninis, appetizers, soup & salad bar, ice cream, shakes, and our new Value Menu."/>
   <meta name="theme-color" content="#0f172a">
 
   <style>
@@ -14,7 +14,6 @@
     a:focus { outline: 2px solid #0ea5a4; outline-offset: 2px; }
     header { background:#0b1329e0; position:sticky; top:0; z-index:1000; border-bottom:1px solid #23304d; }
     nav { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; }
-    .logo { font-weight:700; }
     nav a { color:#f8fafc; text-decoration:none; margin-left:1rem; font-weight:600; }
     nav a:hover, nav a:focus { color:#0ea5a4; }
     section { padding:2rem 1rem; max-width:1200px; margin:auto; }
@@ -80,6 +79,16 @@
       border: 0;
       overflow: hidden;
     }
+
+    /* Menu cards */
+    details { margin-bottom:1rem; }
+    summary { cursor:pointer; font-weight:bold; }
+    .card { background:#1e293b; padding:1rem; border-radius:8px; margin-top:.5rem; }
+    .menu-category { margin-top:1rem; }
+    .menu-item { display:flex; flex-direction:column; margin-bottom:.75rem; }
+    .item-name { font-weight:600; }
+    .price { color:#0ea5a4; font-weight:700; }
+    .item-desc { font-size:.9rem; color:#cbd5e1; }
   </style>
 </head>
 <body>
@@ -88,9 +97,9 @@
 
 <header>
   <nav aria-label="Main navigation">
-<!--    <div class="logo">Dock 9</div> -->
     <div>
-      <a href="#home">Home</a>
+      <a href="index.html">Home</a>
+      <a href="newmenu.html">Menu</a>
       <a href="#order">Order</a>
       <a href="#visit">Visit</a>
       <a href="#river-cam">Webcam</a>
@@ -101,307 +110,271 @@
 <main id="main">
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1>Dock 9 – Warren, PA</h1>
+      <h1>Dock 9 – Full Menu</h1>
       <p class="tagline">
         Stone‑fired pizzas, smash burgers, bowls, paninis, soup & salad bar and ice cream — right on the river in Warren, PA.
       </p>
     </div>
   </section>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+  <section id="menu">
+    <h2>Our Menu</h2>
 
-    /* Hero section with background image */
-    .hero {
-      background-image: url('https://www.dock9warren.com/burgernfries.png');
-      background-size: cover;       /* scales image to fill */
-      background-position: center;  /* keeps it centered */
-      background-repeat: no-repeat; /* no tiling */
-      height: 100vh;                /* full viewport height */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    }
-
-    .hero h1 {
-      background: rgba(0,0,0,0.5);  /* dark overlay for readability */
-      padding: 1rem 2rem;
-      border-radius: 8px;
-    }
-  </style>
-
-
-<section id="menu">
-  <h2>Our Menu</h2>
-  <!-- Appetizers -->
-  <details>
-    <summary>Appetizers</summary>
-    <div class="card">
-      <h3>Appetizers</h3>
-      <div class="menu-category">
-        <div class="menu-item"><div class="item-name">Street Corn Dip</div><div class="price">$9.95</div><div class="item-desc">Char‑grilled sweet corn, cream cheese, cheddar, spices, tortilla chips</div></div>
-        <div class="menu-item"><div class="item-name">Jumbo Brewhouse Pretzel</div><div class="price">$11.95</div><div class="item-desc">Served with beer cheese and mustard</div></div>
-        <div class="menu-item"><div class="item-name">Hot Pepper Cheese Balls</div><div class="price">$6.95</div><div class="item-desc">With ranch</div></div>
-        <div class="menu-item"><div class="item-name">Fried Pickle Spears</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
-        <div class="menu-item"><div class="item-name">Jalapeño Poppers</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
-        <div class="menu-item"><div class="item-name">Fried Banana Pepper Rings</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
-        <div class="menu-item"><div class="item-name">Polish Wings</div><div class="price">$7.95</div><div class="item-desc">Flash Fried Pierogies tossed in your sauce</div></div>
-        <div class="menu-item"><div class="item-name">Southwest Artichoke Dip</div><div class="price">$8.95</div><div class="item-desc">Cream cheese, artichoke hearts, southwest spices, tortilla chips</div></div>
-        <div class="menu-item"><div class="item-name">Chicken Lips</div><div class="price">$8.95</div><div class="item-desc">Boneless chicken: dry ranch, cajun, salt &amp; vinegar, BBQ, garlic parm, hot buffalo, Nashville hot</div></div>
-        <div class="menu-item"><div class="item-name">Chicken Lips (3) &amp; Small Fries</div><div class="price">$6.95</div></div>
-        <div class="menu-item"><div class="item-name">Hot Honey Chicken Lips</div><div class="price">$8.95</div><div class="item-desc">Nashville hot, hot honey drizzle, fried onions</div></div>
-      </div>
-    </div>
-  </details>
-
-  <!-- Specialty Pizzas -->
-  <details>
-    <summary>Specialty Pizzas</summary>
-    <div class="card">
-      <h3>Specialty Pizzas</h3>
-      <div class="menu-category">
-        <div class="menu-item"><div class="item-name">Classic Margherita</div><div class="price">$12.95</div><div class="item-desc">Fresh red sauce, fresh mozzarella, fresh basil</div></div>
-        <div class="menu-item"><div class="item-name">Back Deck BBQ</div><div class="price">$13.95</div><div class="item-desc">Red onion, cheddar, tangy BBQ, diced grilled chicken, fresh mozzarella</div></div>
-        <div class="menu-item"><div class="item-name">Sweet &amp; Spicy</div><div class="price">$13.95</div><div class="item-desc">Sweet chili sauce, red onion, cheddar, pepperoni, pickled hot honey drizzle</div></div>
-        <div class="menu-item"><div class="item-name">Cali White</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, mozzarella, tomatoes, grilled chicken, fresh basil</div></div>
-        <div class="menu-item"><div class="item-name">Rubens</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, sauerkraut, mozzarella, pastrami</div></div>
-        <div class="menu-item"><div class="item-name">PBR</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, cheddar, mozzarella, pickles, pastrami</div></div>
-        <div class="menu-item"><div class="item-name">Buffalo Chicken</div><div class="price">$13.95</div><div class="item-desc">Garlic cream or blue cheese base, mozzarella, cheddar, grilled chicken, buffalo sauce drizzle</div></div>
-        <div class="menu-item"><div class="item-name">GF Veggie Flatbread</div><div class="price">$13.95</div><div class="item-desc">Garlic cream or red sauce, spinach, onions, tomatoes, olives, mushrooms, mozzarella</div></div>
-      </div>
-    </div>
-  </details>
-
-  <!-- Build Your Own Pizza -->
-  <details>
-    <summary>Build Your Own Pizza</summary>
-    <div class="card">
-      <h3>Build Your Own Pizza</h3>
-      <div class="menu-category">
-        <div class="menu-item"><div class="item-name">Base Options</div><div class="price">$12.95</div><div class="item-desc">Red sauce, Pesto, Garlic cream</div></div>
-        <div class="menu-item"><div class="item-name">Cheese Options</div><div class="item-desc">Shredded, Mozzarella</div></div>
-        <div class="menu-item"><div class="item-name">Proteins</div><div class="item-desc">Grilled chicken, Pastrami, Pepperoni, Bacon, Italian Sausage, Pulled Pork, Ham, Smoked Pulled Pork, Sausage</div></div>
-        <div class="menu-item"><div class="item-name">Veggies</div><div class="item-desc">Red onion, Spinach, Mushrooms, Pickles, Tomatoes, Olives, Sauerkraut, Jalapeños</div></div>
-      </div>
-    </div>
-  </details>
-
-  <!-- Smash Burgers -->
-  <details>
-    <summary>Smash Burgers</summary>
-    <div class="card">
-      <h3>Smash Burgers</h3>
-      <div class="menu-category">
-        <div class="menu-item"><div class="item-name">The Dock</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, American cheese, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-        <div class="menu-item"><div class="item-name">Allegheny National Forage (ANF)</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-        <div class="menu-item"><div class="item-name">Conneaut Crunch</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried banana peppers, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-        <div class="menu-item"><div class="item-name">Kinzua Kick</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, Nashville hot chicken lip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-        <div class="menu-item"><div class="item-name">Southern Comfort</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried pickle spears, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-        <div class="menu-item"><div class="item-name">Street Corn Quesadilla Burger</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, street corn dip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-        <div class="menu-item"><div class="item-name">The Lumberjack</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried egg, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-        <div class="menu-item"><div class="item-name">The Bridge Buster</div><div class="price">$16.95</div><div class="item-desc">Three bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-      </div>
-    </div>
-  </details>
-  <!-- Paninis & More -->
-  <details>
-    <summary>Paninis & More</summary>
-    <div class="card">
-      <h3>Paninis &amp; More</h3>
-      <p>Served with house fried chips. Upgrade: fries +$1.00 • onion rings +$1.75 • side salad +$2.00</p>
-      <div class="menu-category">
-        <div class="menu-item"><div class="item-name">Ultimate Grilled Cheese</div><div class="price">$13.95</div></div>
-        <div class="menu-item"><div class="item-name">Chicken Bacon Ranch</div><div class="price">$14.95</div></div>
-        <div class="menu-item"><div class="item-name">Brisket Cheesesteak</div><div class="price">$15.95</div></div>
-        <div class="menu-item"><div class="item-name">Club 3</div><div class="price">$13.95</div></div>
-        <div class="menu-item"><div class="item-name">Reuben</div><div class="price">$14.95</div></div>
-        <div class="menu-item"><div class="item-name">Battered Fish Wrap</div><div class="price">$13.95</div></div>
-        <div class="menu-item"><div class="item-name">Caprese Panini</div><div class="price">$12.95</div></div>
-        <div class="menu-item"><div class="item-name">Nashville Hot Chicken Wrap</div><div class="price">$12.95</div></div>
-        <div class="menu-item"><div class="item-name">Southwest Veggie Wrap</div><div class="price">$12.95</div></div>
-      </div>
-    </div>
-  </details>
-
-  <!-- Sides -->
-  <details>
-    <summary>Sides</summary>
-    <div class="card">
-      <h3>Sides</h3>
-      <div class="menu-category">
-        <div class="menu-item"><div class="item-name">House Fried Chips</div><div class="price">$3.45</div></div>
-        <div class="menu-item"><div class="item-name">Fries</div><div class="price">$4.45</div></div>
-        <div class="menu-item"><div class="item-name">Onion Rings</div><div class="price">$5.45</div></div>
-        <div class="menu-item"><div class="item-name">Side Salad</div><div class="price">$5.45</div></div>
-      </div>
-    </div>
-  </details>
-
-  <!-- Kid's Kove -->
-  <details>
-    <summary>Kid's Kove</summary>
-    <div class="card">
-      <h3>Kid's Kove</h3>
-      <p>All kids’ meals are served with fries and a drink.</p>
-      <div class="menu-category">
-        <div class="menu-item"><div class="item-name">Chicken Tenders (2)</div><div class="price">$7.95</div></div>
-        <div class="menu-item"><div class="item-name">Grilled Cheese</div><div class="price">$7.95</div></div>
-        <div class="menu-item"><div class="item-name">Cheeseburger</div><div class="price">$7.95</div></div>
-        <div class="menu-item"><div class="item-name">1/4 lb. Burger w/ American Cheese</div><div class="price">$8.95</div></div>
-      </div>
-    </div>
-  </details>
-
-  <!-- Desserts & Ice Cream -->
-  <details>
-    <summary>Desserts & Ice Cream</summary>
-    <div class="card">
-      <h3>Desserts &amp; Ice Cream</h3>
-      <div class="menu-category">
-        <div class="item-name">Hershey's Hard Ice Cream</div>
-        <div class="item-desc">One Scoop $3.50, Two Scoops $4.50, Three Scoops $5.50, Pint $6.00, Quart $9.00</div>
-        <div class="item-name">Soft Serve</div>
-        <div class="item-desc">Vanilla, Chocolate, Twist — Baby $2.00, Small $3.00, Medium $4.00, Large $5.00, Pint $6.00, Quart $9.00</div>
-        <div class="menu-item"><div class="item-name">The Avenue Milkshake</div><div class="price">$10.00</div><div class="item-desc">Hershey Ice Cream, toppings, whipped cream, cherry</div></div>
-        <div class="menu-item"><div class="item-name">Sasquatch River Float</div><div class="price">$6.00</div><div class="item-desc">Soft serve with any fountain drink (16oz)</div></div>
-        <div class="menu-item"><div class="item-name">Kinzua Kraze Sundae</div><div class="price">$6.00</div><div class="item-desc">Soft serve, one topping, whipped cream, cherry</div></div>
-        <div class="menu-item"><div class="item-name">Lake Effect Flurries</div><div class="price">$5.50 / $6.50</div><div class="item-desc">Small / Large — mix-ins: Heath, Toffee, Kit-Kat, M&amp;M's, Reese's Pieces, Butterfinger, Oreo, Cookie Dough, Peanut Butter Cup, and more</div></div>
-      </div>
-    </div>
-  </details>
-
-<!-- Dock 9 Value Menu -->
-<details>
-  <summary>💲 Dock 9 Value Menu</summary>
-  <div class="card">
-    <h3>🚤 Dock 9 Value Menu — Fast, Fresh, Affordable</h3>
-    <p>Available Mon–Fri, 11 AM – 3 PM • Perfect for lunch breaks or grab-and-go.</p>
-
-    <!-- Smash Burgers (moved to top) -->
-    <details open>
-      <summary>🍔 Smash Burgers</summary>
-      <div class="menu-category">
-        <div class="menu-item">
-          <div class="item-name">Single Smash</div>
-          <div class="price">$4.50</div>
-          <div class="item-desc">Juicy, seared patty with that crave‑worthy smash flavor.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Double Smash</div>
-          <div class="price">$6.50</div>
-          <div class="item-desc">Twice the beef, twice the flavor — still a great value.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Burger + Fries Combo</div>
-          <div class="price">$7.99</div>
-          <div class="item-desc">A full meal deal — juicy burger with crispy fries.</div>
-        </div>
-      </div>
-    </details>
-
-    <!-- Pizza Slices -->
+    <!-- Appetizers -->
     <details>
-      <summary>🍕 Pizza Slices</summary>
-      <div class="menu-category">
-        <div class="menu-item">
-          <div class="item-name">Cheese Slice</div>
-          <div class="price">$2.50</div>
-          <div class="item-desc">Classic, gooey cheese on stone‑fired crust — simple and satisfying.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Pepperoni Slice</div>
-          <div class="price">$2.75</div>
-          <div class="item-desc">A fan favorite — melty cheese topped with zesty pepperoni.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Daily Special Slice</div>
-          <div class="price">$3.25</div>
-          <div class="item-desc">Ask what’s fresh today — always a tasty surprise.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Add a Drink</div>
-          <div class="price">$1.50</div>
-          <div class="item-desc">Pair your slice with a refreshing fountain drink.</div>
+      <summary>Appetizers</summary>
+      <div class="card">
+        <h3>Appetizers</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Street Corn Dip</div><div class="price">$9.95</div><div class="item-desc">Char‑grilled sweet corn, cream cheese, cheddar, spices, tortilla chips</div></div>
+          <div class="menu-item"><div class="item-name">Jumbo Brewhouse Pretzel</div><div class="price">$11.95</div><div class="item-desc">Served with beer cheese and mustard</div></div>
+          <div class="menu-item"><div class="item-name">Hot Pepper Cheese Balls</div><div class="price">$6.95</div><div class="item-desc">With ranch</div></div>
+          <div class="menu-item"><div class="item-name">Fried Pickle Spears</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
+          <div class="menu-item"><div class="item-name">Jalapeño Poppers</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
+          <div class="menu-item"><div class="item-name">Fried Banana Pepper Rings</div><div class="price">$6.95</div><div class="item-desc">Choice of sauce</div></div>
+          <div class="menu-item"><div class="item-name">Polish Wings</div><div class="price">$7.95</div><div class="item-desc">Flash Fried Pierogies tossed in your sauce</div></div>
+          <div class="menu-item"><div class="item-name">Southwest Artichoke Dip</div><div class="price">$8.95</div><div class="item-desc">Cream cheese, artichoke hearts, southwest spices, tortilla chips</div></div>
+          <div class="menu-item"><div class="item-name">Chicken Lips</div><div class="price">$8.95</div><div class="item-desc">Boneless chicken: dry ranch, cajun, salt &amp; vinegar, BBQ, garlic parm, hot buffalo, Nashville hot</div></div>
+          <div class="menu-item"><div class="item-name">Chicken Lips (3) &amp; Small Fries</div><div class="price">$6.95</div></div>
+          <div class="menu-item"><div class="item-name">Hot Honey Chicken Lips</div><div class="price">$8.95</div><div class="item-desc">Nashville hot, hot honey drizzle, fried onions</div></div>
         </div>
       </div>
     </details>
 
-    <!-- Sweet Treats -->
+    <!-- Specialty Pizzas -->
     <details>
-      <summary>🍦 Sweet Treats price valid with another value meal item only from other than sweet treats</summary>
-      <div class="menu-category">
-        <div class="menu-item">
-          <div class="item-name">Single Scoop</div>
-          <div class="price">$2.00</div>
-          <div class="item-desc">Cool and creamy — the perfect quick treat.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Mini Sundae</div>
-          <div class="price">$3.50</div>
-          <div class="item-desc">A little indulgence with toppings to sweeten your day.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Milkshake (12 oz)</div>
-          <div class="price">$4.00</div>
-          <div class="item-desc">Thick, rich, and hand‑spun — sipable happiness.</div>
+      <summary>Specialty Pizzas</summary>
+      <div class="card">
+        <h3>Specialty Pizzas</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Classic Margherita</div><div class="price">$12.95</div><div class="item-desc">Fresh red sauce, fresh mozzarella, fresh basil</div></div>
+          <div class="menu-item"><div class="item-name">Back Deck BBQ</div><div class="price">$13.95</div><div class="item-desc">Red onion, cheddar, tangy BBQ, diced grilled chicken, fresh mozzarella</div></div>
+          <div class="menu-item"><div class="item-name">Sweet &amp; Spicy</div><div class="price">$13.95</div><div class="item-desc">Sweet chili sauce, red onion, cheddar, pepperoni, pickled hot honey drizzle</div></div>
+          <div class="menu-item"><div class="item-name">Cali White</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, mozzarella, tomatoes, grilled chicken, fresh basil</div></div>
+          <div class="menu-item"><div class="item-name">Rubens</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, sauerkraut, mozzarella, pastrami</div></div>
+          <div class="menu-item"><div class="item-name">PBR</div><div class="price">$13.95</div><div class="item-desc">Garlic cream sauce, cheddar, mozzarella, pickles, pastrami</div></div>
+          <div class="menu-item"><div class="item-name">Buffalo Chicken</div><div class="price">$13.95</div><div class="item-desc">Garlic cream or blue cheese base, mozzarella, cheddar, grilled chicken, buffalo sauce drizzle</div></div>
+          <div class="menu-item"><div class="item-name">GF Veggie Flatbread</div><div class="price">$13.95</div><div class="item-desc">Garlic cream or red sauce, spinach, onions, tomatoes, olives, mushrooms, mozzarella</div></div>
         </div>
       </div>
     </details>
 
-    <!-- Value Packs -->
+    <!-- Build Your Own Pizza -->
     <details>
-      <summary>📦 Value Packs</summary>
-      <div class="menu-category">
-        <div class="menu-item">
-          <div class="item-name">Dock Lunch Pack</div>
-          <div class="price">$14.99</div>
-          <div class="item-desc">4 slices + 4 drinks — perfect for a quick crew lunch.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Burger Box</div>
-          <div class="price">$19.99</div>
-          <div class="item-desc">4 singles + fries — feed the team without breaking the bank.</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-name">Mixed Pack</div>
-          <div class="price">$15.99</div>
-          <div class="item-desc">2 slices + 2 burgers + fries — a little of everything.</div>
+      <summary>Build Your Own Pizza</summary>
+      <div class="card">
+        <h3>Build Your Own Pizza</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Base Options</div><div class="price">$12.95</div><div class="item-desc">Red sauce, Pesto, Garlic cream</div></div>
+          <div class="menu-item"><div class="item-name">Cheese Options</div><div class="item-desc">Shredded, Mozzarella</div></div>
+          <div class="menu-item"><div class="item-name">Proteins</div><div class="item-desc">Grilled chicken, Pastrami, Pepperoni, Bacon, Italian Sausage, Pulled Pork, Ham, Smoked Pulled Pork, Sausage</div></div>
+          <div class="menu-item"><div class="item-name">Veggies</div><div class="item-desc">Red onion, Spinach, Mushrooms, Pickles, Tomatoes, Olives, Sauerkraut, Jalapeños</div></div>
         </div>
       </div>
     </details>
 
-  </div>
-</details>
+    <!-- Smash Burgers -->
+    <details>
+      <summary>Smash Burgers</summary>
+      <div class="card">
+        <h3>Smash Burgers</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">The Dock</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, American cheese, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">Allegheny National Forage (ANF)</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">Conneaut Crunch</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried banana peppers, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">Kinzua Kick</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, Nashville hot chicken lip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">Southern Comfort</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried pickle spears, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">Street Corn Quesadilla Burger</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, street corn dip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">The Lumberjack</div><div class="price">$14.95</div><div class="item-desc">Bacon patties, cheddar cheese, fried egg, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">The Bridge Buster</div><div class="price">$16.95</div><div class="item-desc">Three bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+        </div>
+      </div>
+    </details>
 
-</section>
-<section id="order">
-  <h2>Order Online</h2>
-  <p id="order-desc">
-    <strong>
-      Place your order directly through our secure online ordering system. Orders go straight to our kitchen via our Point of Sales System — fresh, fast, and ready when you arrive.
-    </strong>
-  </p>
-<!--  <div style="border:1px solid #23304d; border-radius:8px; overflow:hidden; max-width:100%; height:800px; background:#fff;">
-    <iframe 
-      src="https://order.menudrive.com/dock9/" 
-      style="width:100%; height:100%; border:0;" 
-      title="Dock 9 Online Ordering System"
-      aria-describedby="order-desc"
-      loading="lazy">
-    </iframe>
-  </div> -->
-  <p style="margin-top:1rem; text-align:center;">
-    <a href="https://order.menudrive.com/dock9" target="_blank" rel="noopener" class="btn">
-      Start Your Order
-    </a>
-  </p>
-</section>
+    <!-- Paninis & More -->
+    <details>
+      <summary>Paninis & More</summary>
+      <div class="card">
+        <h3>Paninis &amp; More</h3>
+        <p>Served with house fried chips. Upgrade: fries +$1.00 • onion rings +$1.75 • side salad +$2.00</p>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Ultimate Grilled Cheese</div><div class="price">$13.95</div></div>
+          <div class="menu-item"><div class="item-name">Chicken Bacon Ranch</div><div class="price">$14.95</div></div>
+          <div class="menu-item"><div class="item-name">Brisket Cheesesteak</div><div class="price">$15.95</div></div>
+          <div class="menu-item"><div class="item-name">Club 3</div><div class="price">$13.95</div></div>
+          <div class="menu-item"><div class="item-name">Reuben</div><div class="price">$14.95</div></div>
+          <div class="menu-item"><div class="item-name">Battered Fish Wrap</div><div class="price">$13.95</div></div>
+          <div class="menu-item"><div class="item-name">Caprese Panini</div><div class="price">$12.95</div></div>
+          <div class="menu-item"><div class="item-name">Nashville Hot Chicken Wrap</div><div class="price">$12.95</div></div>
+          <div class="menu-item"><div class="item-name">Southwest Veggie Wrap</div><div class="price">$12.95</div></div>
+        </div>
+      </div>
+    </details>
 
+    <!-- Sides -->
+    <details>
+      <summary>Sides</summary>
+      <div class="card">
+        <h3>Sides</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">House Fried Chips</div><div class="price">$3.45</div></div>
+          <div class="menu-item"><div class="item-name">Fries</div><div class="price">$4.45</div></div>
+          <div class="menu-item"><div class="item-name">Onion Rings</div><div class="price">$5.45</div></div>
+          <div class="menu-item"><div class="item-name">Side Salad</div><div class="price">$5.45</div></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Kid's Kove -->
+    <details>
+      <summary>Kid's Kove</summary>
+      <div class="card">
+        <h3>Kid's Kove</h3>
+        <p>All kids’ meals are served with fries and a drink.</p>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Chicken Tenders (2)</div><div class="price">$7.95</div></div>
+          <div class="menu-item"><div class="item-name">Grilled Cheese</div><div class="price">$7.95</div></div>
+          <div class="menu-item"><div class="item-name">Cheeseburger</div><div class="price">$7.95</div></div>
+          <div class="menu-item"><div class="item-name">1/4 lb. Burger w/ American Cheese</div><div class="price">$8.95</div></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Desserts & Ice Cream -->
+    <details>
+      <summary>Desserts & Ice Cream</summary>
+      <div class="card">
+        <h3>Desserts &amp; Ice Cream</h3>
+        <div class="menu-category">
+          <div class="item-name">Hershey's Hard Ice Cream</div>
+          <div class="item-desc">One Scoop $3.50, Two Scoops $4.50, Three Scoops $5.50, Pint $6.00, Quart $9.00</div>
+          <div class="item-name">Soft Serve</div>
+          <div class="item-desc">Vanilla, Chocolate, Twist — Baby $2.00, Small $3.00, Medium $4.00, Large $5.00, Pint $6.00, Quart $9.00</div>
+          <div class="menu-item"><div class="item-name">The Avenue Milkshake</div><div class="price">$10.00</div><div class="item-desc">Hershey Ice Cream, toppings, whipped cream, cherry</div></div>
+          <div class="menu-item"><div class="item-name">Sasquatch River Float</div><div class="price">$6.00</div><div class="item-desc">Soft serve with any fountain drink (16oz)</div></div>
+          <div class="menu-item"><div class="item-name">Kinzua Kraze Sundae</div><div class="price">$6.00</div><div class="item-desc">Soft serve, one topping, whipped cream, cherry</div></div>
+          <div class="menu-item"><div class="item-name">Lake Effect Flurries</div><div class="price">$5.50 / $6.50</div><div class="item-desc">Small / Large — mix-ins: Heath, Toffee, Kit-Kat, M&amp;M's, Reese's Pieces, Butterfinger, Oreo, Cookie Dough, Peanut Butter Cup, and more</div></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Dock 9 Value Menu -->
+    <details>
+      <summary>💲 Dock 9 Value Menu</summary>
+      <div class="card">
+        <h3>🚤 Dock 9 Value Menu — Fast, Fresh, Affordable</h3>
+        <p>Available Mon–Fri, 11 AM – 3 PM • Perfect for lunch breaks or grab-and-go.</p>
+
+        <!-- Smash Burgers (moved to top) -->
+        <details open>
+          <summary>🍔 Smash Burgers</summary>
+          <div class="menu-category">
+            <div class="menu-item">
+              <div class="item-name">Single Smash</div>
+              <div class="price">$4.50</div>
+              <div class="item-desc">Juicy, seared patty with that crave‑worthy smash flavor.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Double Smash</div>
+              <div class="price">$6.50</div>
+              <div class="item-desc">Twice the beef, twice the flavor — still a great value.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Burger + Fries Combo</div>
+              <div class="price">$7.99</div>
+              <div class="item-desc">A full meal deal — juicy burger with crispy fries.</div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Pizza Slices -->
+        <details>
+          <summary>🍕 Pizza Slices</summary>
+          <div class="menu-category">
+            <div class="menu-item">
+              <div class="item-name">Cheese Slice</div>
+              <div class="price">$2.50</div>
+              <div class="item-desc">Classic, gooey cheese on stone‑fired crust — simple and satisfying.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Pepperoni Slice</div>
+              <div class="price">$2.75</div>
+              <div class="item-desc">A fan favorite — melty cheese topped with zesty pepperoni.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Daily Special Slice</div>
+              <div class="price">$3.25</div>
+              <div class="item-desc">Ask what’s fresh today — always a tasty surprise.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Add a Drink</div>
+              <div class="price">$1.50</div>
+              <div class="item-desc">Pair your slice with a refreshing fountain drink.</div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Sweet Treats -->
+        <details>
+          <summary>🍦 Sweet Treats price valid with another value meal item only from other than sweet treats</summary>
+          <div class="menu-category">
+            <div class="menu-item">
+              <div class="item-name">Single Scoop</div>
+              <div class="price">$2.00</div>
+              <div class="item-desc">Cool and creamy — the perfect quick treat.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Mini Sundae</div>
+              <div class="price">$3.50</div>
+              <div class="item-desc">A little indulgence with toppings to sweeten your day.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Milkshake (12 oz)</div>
+              <div class="price">$4.00</div>
+              <div class="item-desc">Thick, rich, and hand‑spun — sipable happiness.</div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Value Packs -->
+        <details>
+          <summary>📦 Value Packs</summary>
+          <div class="menu-category">
+            <div class="menu-item">
+              <div class="item-name">Dock Lunch Pack</div>
+              <div class="price">$14.99</div>
+              <div class="item-desc">4 slices + 4 drinks — perfect for a quick crew lunch.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Burger Box</div>
+              <div class="price">$19.99</div>
+              <div class="item-desc">4 singles + fries — feed the team without breaking the bank.</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-name">Mixed Pack</div>
+              <div class="price">$15.99</div>
+              <div class="item-desc">2 slices + 2 burgers + fries — a little of everything.</div>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+  </section>
+
+  <section id="order">
+    <h2>Order Online</h2>
+    <p id="order-desc">
+      <strong>
+        Place your order directly through our secure online ordering system. Orders go straight to our kitchen via our Point of Sales System — fresh, fast, and ready when you arrive.
+      </strong>
+    </p>
+    <p style="margin-top:1rem; text-align:center;">
+      <a href="https://order.menudrive.com/dock9" target="_blank" rel="noopener" class="btn">
+        Start Your Order
+      </a>
+    </p>
+  </section>
 
   <section id="river-cam" style="padding: 2rem 1rem; max-width: 960px; margin: 0 auto;">
     <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">Our River View</h2>
