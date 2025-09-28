@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+  // Edit date when editing file
+  const lastEditDate = "4:28 PM 9/28/2025";
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dock 9 – Menu</title>
@@ -398,6 +402,11 @@
 </main>
 
 <footer role="contentinfo">
+<p id="last-updated"></p>
+<script>
+  document.getElementById("last-updated").textContent =
+    "Last updated: " + lastEditDate;
+</script>
   &copy; 2025 Dock 9 – Warren, PA
 </footer>
 
