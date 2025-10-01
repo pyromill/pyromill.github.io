@@ -131,7 +131,14 @@ body::before {
     summary { cursor:pointer; font-weight:bold; }
     .card { background:#1e293b; padding:1rem; border-radius:8px; margin-top:.5rem; }
     .menu-category { margin-top:1rem; }
-    .menu-item { display:flex; flex-direction:column; margin-bottom:.75rem; }
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers children horizontally */
+  text-align: center;    /* ensures multi-line text is centered */
+  margin-bottom: .75rem;
+}
+
     .item-name { font-weight:600; }
     .price { color:#0ea5a4; font-weight:700; }
     .item-desc { font-size:.9rem; color:#cbd5e1; }
