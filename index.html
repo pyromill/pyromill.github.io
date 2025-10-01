@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+  // Edit date when editing file
+  const lastEditDate = "3:31 PM 10/1/2025";
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dock 9 – Warren, PA</title>
-  <meta name="description" content="Dock 9 in Warren, PA. Stone-fired pizzas, smash burgers, paninis, bowls, appetizers, soup & salad bar, ice cream, shakes, and soft drinks."/>
+  <title>Dock 9 – Menu</title>
+  <meta name="description" content="Dock 9 in Warren, PA. Full menu including stone-fired pizzas, smash burgers, bowls, paninis, appetizers, soup & salad bar, ice cream, shakes, and our new Value Menu."/>
   <meta name="theme-color" content="#0f172a">
 
   <style>
+.menu-instructions {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #444;
+    font-style: italic;
+}
+
     /* Base layout */
-    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; background:#0f172a; color:#f8fafc; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #f8fafc;
+  background-color: #0f172a; /* fallback solid background */
+  overflow-x: hidden; /* prevent scrollbars from rotated text */
+  text-align: center; /* ✅ centers text globally */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;   /* oversize so corners stay covered */
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  
+  background-image: url("img/dock9svglogo.svg");
+  background-repeat: repeat;
+  background-size: 100px 100px; /* tweak density */
+  
+  transform: rotate(-45deg);    /* spin the whole layer */
+  transform-origin: center;     /* pivot around the middle */
+  
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+}
+/* Center the whole menu section */
+#menu {
+  text-align: center;
+}
+
+/* Center the flex children inside each menu item */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ✅ centers horizontally */
+  text-align: center;    /* ✅ ensures text inside is centered */
+}
+
+
     a { color: inherit; }
     a:focus { outline: 2px solid #0ea5a4; outline-offset: 2px; }
     header { background:#0b1329e0; position:sticky; top:0; z-index:1000; border-bottom:1px solid #23304d; }
     nav { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1rem; }
-    .logo { font-weight:700; }
     nav a { color:#f8fafc; text-decoration:none; margin-left:1rem; font-weight:600; }
     nav a:hover, nav a:focus { color:#0ea5a4; }
     section { padding:2rem 1rem; max-width:1200px; margin:auto; }
@@ -50,11 +102,11 @@
     }
     .hero-text {
       display: flex; flex-direction: column; gap: 1rem; align-items: center;
-      z-index: 1; max-width: 900px; padding: 0 1rem;
+      z-index: 1; max-width: 600px; padding: 0 1rem;
     }
     .hero h1, .hero .tagline {
       background: rgba(0,0,0,0.6);
-      padding: 1rem 2rem; border-radius: 8px; margin: 0; max-width: 90%;
+      padding: 1rem 2rem; border-radius: 8px; margin: 0; width: 60%; max-width: 500px; 
     }
     .hero h1 { font-size: 2rem; font-weight: 700; }
     .hero .tagline { font-size: 1.1rem; font-weight: 400; }
@@ -80,6 +132,23 @@
       border: 0;
       overflow: hidden;
     }
+
+    /* Menu cards */
+    details { margin-bottom:1rem; }
+    summary { cursor:pointer; font-weight:bold; }
+    .card { background:#1e293b; padding:1rem; border-radius:8px; margin-top:.5rem; }
+    .menu-category { margin-top:1rem; }
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers children horizontally */
+  text-align: center;    /* ensures multi-line text is centered */
+  margin-bottom: .75rem;
+}
+
+    .item-name { font-weight:600; }
+    .price { color:#0ea5a4; font-weight:700; }
+    .item-desc { font-size:.9rem; color:#cbd5e1; }
   </style>
 </head>
 <body>
@@ -88,9 +157,9 @@
 
 <header>
   <nav aria-label="Main navigation">
-<!--    <div class="logo">Dock 9</div> -->
     <div>
-      <a href="#home">Home</a>
+      <a href="index.html">Home</a>
+      <a href="newmenu.html">Menu</a>
       <a href="#order">Order</a>
       <a href="#visit">Visit</a>
       <a href="#river-cam">Webcam</a>
@@ -101,21 +170,316 @@
 <main id="main">
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1>Dock 9 – Warren, PA</h1>
+      <h1>Dock 9</h1>
       <p class="tagline">
-        Stone‑fired pizzas, smash burgers, bowls, paninis, soup & salad bar and ice cream — right on the river in Warren, PA.
+        Stone‑fired pizzas, smash burgers, bowls, paninis, soup & salad bar and ice cream. Right on the river in Warren, PA.
       </p>
     </div>
   </section>
 
+  <section id="menu">
+    <h2>Our Menu</h2>
+	<p class="menu-instructions">Click the arrows below to expand or contract each section of the menu.</p>
+
+<!-- Appetizers -->
+<details open>
+  <summary>Appetizers</summary>
+  <div class="card">
+    <h3>Appetizers</h3>
+    <div class="menu-category">
+
+      <div class="menu-item">
+        <div class="item-name">Street Corn Dip</div>
+        <div class="item-desc">Char‑grilled sweet corn, cream cheese, cheddar cheese and Jalapenos, Topped with tajin and grated parmesan. Served with tortilla chips</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Jumbo Brewhouse Pretzel</div>
+        <div class="item-desc">Served with beer cheese and brew pub mustard</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name"> Provolone Wedges</div>
+        <div class="item-desc">Lightly Breaded, Flash Fried, served with house red.</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Hot Pepper Cheese Balls</div>
+        <div class="item-desc">Served with sauce of your choice.</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Hot Honey Onion Rings</div>
+        <div class="item-desc">Breaded steakhouse onion rings, drizzled with hot honey and topped with crumbled bacon</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Fried Pickle Spears</div>
+        <div class="item-desc">Served with sauce of your choice</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Jalapeño Poppers</div>
+        <div class="item-desc">Stuffed with cream cheese, served with sauce of your choice.</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Fried Banana Pepper Rings</div>
+        <div class="item-desc">Served with sauce of your choice.</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Polish Wings</div>
+        <div class="item-desc">Flash Fried Pierogies tossed in your choice of sauce</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Spinach Artichoke Dip</div>
+        <div class="item-desc">Served with tortilla chips.</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Freshly Fried Chip Basket</div>
+        <div class="item-desc">Traditional, Dry Ranch, Cajun, Salt & Vinegar or Dry BBQ Seasoning</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Chicken Lips</div>
+        <div class="item-desc">Small or Large order, Tossed in your choice of sauce<br>
+        Sauces: Buffalo, BBQ, Garlic Parm, Hot Honey, Nashville hot. Dry rub: Salt & Vinegar, Dry Ranch, Cajun</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Chicken Tenders and Fries</div>
+        <div class="item-desc">Toss in sauce of choice for a 1.00 more</div>
+      </div>
+
+    </div>
+  </div>
+</details>
+
+
+    <!-- Specialty Pizzas -->
+    <details>
+      <summary>Specialty Pizzas</summary>
+      <div class="card">
+        <h3>Specialty Pizzas</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Classic Margherita</div><div class="item-desc">Fresh mozzarella, Fresh basil and House Red Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Back Deck BBQ</div><div class="item-desc">Pulled Smoked Pork, Sweet and Tangy BBQ, Diced Red Onion and Mozzarella Cheese</div></div>
+          <div class="menu-item"><div class="item-name">Sweet & Spicy</div><div class="item-desc">House Red, Mozzarella, Cup & Char Pepperoni, Whipped Ricotta, Hot Honey Drizzle</div></div>
+          <div class="menu-item"><div class="item-name">Cali White</div><div class="item-desc">Basil Pesto Base, Mozzarella, Tomatoes, Grilled Chicken, Fresh Basil and Red Onion</div></div>
+          <div class="menu-item"><div class="item-name">Reuben</div><div class="item-desc">Sliced Corned Beef, Melted Swiss, Kraut, 1,000 Island Base</div></div>
+          <div class="menu-item"><div class="item-name">PBR</div><div class="item-desc">Ranch Base, Mozzarella, Dill Pickles, Crumbled Bacon</div></div>
+          <div class="menu-item"><div class="item-name">Buffalo Chicken</div><div class="item-desc">Choice of Ranch or Blue Cheese Base, Chicken, Hot Sauce and Mozzarella</div></div>
+          <div class="menu-item"><div class="item-name">GF Veggie Flatbread</div><div class="item-desc">Cauliflower Crust, Red Sauce, Spinach, Red Onion, Peppers, Black Olives and Mozzarella</div></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Build Your Own Pizza -->
+    <details>
+      <summary>Build Your Own Pizza</summary>
+      <div class="card">
+        <h3>Build Your Own Pizza</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Base Options</div><div class="item-desc">Red Sauce, Pesto, BBQ</div></div>
+          <div class="menu-item"><div class="item-name">Cheese Options</div><div class="item-desc">Shredded Mozzarella</div></div>
+          <div class="menu-item"><div class="item-name">Proteins</div><div class="item-desc">Cup n Char Pepperoni, Sausage, Crumbled Bacon, Grilled Chicken, Ham, Pulled Pork</div></div>
+          <div class="menu-item"><div class="item-name">Veggies</div><div class="item-desc">Red Onions, Bell Peppers, Mushrooms, Black Olives, Diced Tomatoes, Banana Peppers, Fresh Spinach</div></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Smash Burgers -->
+    <details>
+      <summary>Smash Burgers</summary>
+      <div class="card">
+        <h3>Smash Burgers</h3>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">The Dock</div><div class="item-desc">American Cheese, Shredded Lettuce, Sliced Tomato, Sliced Onion, Dill Pickles and Dock Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Allegheny National Forage (ANF)</div><div class="item-desc">Grilled Mushrooms, Melted Swiss Cheese and A Signature Mushroom Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Conewango Crunch</div><div class="item-desc">Crispy Bacon, Breaded Onion Ring, Melted Cheddar Cheese, Cream Cheese and A Sweet and Tangy BBQ Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Kinzua Kick</div><div class="item-desc">Southwest Seasoned Beef, Pickled Jalapeno, Hot Pepper Cheese, Cream Cheese, Sweet and Smokey Bacon Jam</div></div>
+          <div class="menu-item"><div class="item-name">Street Corn Quesadilla Burger</div><div class="item-desc">Southwest Seasoned Black Bean Burger, Shredded Lettuce, Sliced Tomato, Mexican Corn Dip, Cheddar Cheese, Wrapped in a Grilled Flour Tortilla</div></div>
+   		  <div class="menu-item"><div class="item-name">The Trussel Melt</div><div class="item-desc">Two Smash Patties, Topped with Caramelized Onions, Melted Cheddar Cheese and 1,000 Island on a Grilled Marble Rye</div></div>
+          <div class="menu-item"><div class="item-name">The Lumberjack Jammer</div><div class="item-desc">Smash Patties, Sliced Smoked Brisket, Cheddar Cheese, Bacon Jam, Dill Pickle Slices, Toasted Brioche Roll</div></div>
+          <div class="menu-item"><div class="item-name">The Bridge Buster</div><div class="item-desc">Smash Patties, Mac N Cheese, Between Two Grilled Cheese Sandwiches</div></div>
+        </div>
+      </div>
+    </details>
+
+<!-- Paninis & More -->
+<details>
+  <summary>Paninis & More</summary>
+  <div class="card">
+    <h3>Paninis & More</h3>
+    <p>Served with house fried chips. Upgrade: fries +$1.00 • onion rings +$1.75 • side salad +$2.00</p>
+    <div class="menu-category">
+
+      <div class="menu-item">
+        <div class="item-name">Ultimate Grilled Cheese</div>
+        <div class="item-desc">Melted American Cheese, Crispy Chicken Tender, Bacon, Smoked Pulled Pork, BBQ Sauce on Grilled Sourdough</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Chicken Bacon Ranch</div>
+        <div class="item-desc">Grilled Chicken, House Made Ranch, Crisp Bacon, Tomato, Sliced Red Onion, Mozzarella on a Pressed Ciabatta Roll</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Cuban</div>
+        <div class="item-desc">Sliced Ham, Smoked Pork, Swiss Cheese, Dill Pickles, Raspberry Honey Mustard On Grilled Sourdough</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Brisket Cheesesteak</div>
+        <div class="item-desc">Sliced Smoked Brisket, Grilled Bell Peppers & Onions, Melty Cheese On a Pressed Ciabatta Roll.</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Club</div>
+        <div class="item-desc">Sliced Ham, Sliced Turkey, Crispy Bacon, Lettuce, Tomato, Homemade Basil Pesto Mayo On Pressed Ciabatta Roll or ask for a Flour Tortilla</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Reuben</div>
+        <div class="item-desc">Thin Sliced Corned Beef, Melted Swiss Cheese, Tangy Kraut and 1,000 Island On Grilled Marble Rye. Ask to make it a Rachell with Turkey!</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Battered Fish Wrap</div>
+        <div class="item-desc">Breaded Pollock, Broccoli Power Slaw, Mandarin Sesame Vinaigrette, Wrapped in a Jumbo Tortilla</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Caprese Panini</div>
+        <div class="item-desc">Fresh Mozzarella, Basil Pesto, Tomato On Grilled Sourdough</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Nashville Hot Chicken Wrap</div>
+        <div class="item-desc"> Chicken Breast Tossed in Nashville Style Hot Sauce, Shredded Lettuce, Sliced Tomato and Dill Pickles on a Grilled Brioche Roll</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Grilled Veggie Wrap</div>
+        <div class="item-desc">Mandarin Sesame Broccoli Slaw, Shredded Lettuce, Diced Tomato, Sliced Onion Wrapped in a Jumbo Tortilla</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Italian</div>
+        <div class="item-desc">Sliced Ham, Salami, Pepperoni, Provolone Cheese, Shredded Lettuce, Sliced Tomatoes, Basil Pesto Mayo on a Pressed Ciabatta Roll</div>
+      </div>
+
+    </div>
+  </div>
+</details>
+
+
+<!-- Sides -->
+<details>
+  <summary>Sides</summary>
+  <div class="card">
+    <h3>Sides</h3>
+    <div class="menu-category">
+      <div class="menu-item"><div class="item-name">House Fried Chips</div></div>
+      <div class="menu-item"><div class="item-name">Fries</div></div>
+      <div class="menu-item"><div class="item-name">Onion Rings</div></div>
+      <div class="menu-item"><div class="item-name">Side Salad</div></div>
+      <div class="menu-item"><div class="item-name">Mac n Cheese</div></div>
+    </div>
+  </div>
+</details>
+
+
+    <!-- Kid's Kove -->
+    <details>
+      <summary>Kid's Kove</summary>
+      <div class="card">
+        <h3>Kid's Kove</h3>
+        <p>All kids’ meals are served with fries, drink and a kid's Soft Serve.</p>
+        <div class="menu-category">
+          <div class="menu-item"><div class="item-name">Chicken Tenders (2)</div></div>
+          <div class="menu-item"><div class="item-name">Grilled Cheese</div></div>
+          <div class="menu-item"><div class="item-name">White Cheddar Mac n Cheese</div></div>
+          <div class="menu-item"><div class="item-name">Jr. Smash Burger w/ American Cheese</div></div>
+        </div>
+      </div>
+    </details>
+
+   <!-- Desserts & Ice Cream -->
+<details>
+  <summary>Desserts & Ice Cream</summary>
+  <div class="card">
+    <h3>Desserts &amp; Ice Cream</h3>
+    <div class="menu-category">
+
+      <div class="menu-item">
+        <div class="item-name">Hershey's Hard Ice Cream</div>
+        <div class="item-desc">
+          Better Brownie Batter, Birthday Cake, Brown Butter Bourbon Truffle, Butter Pecan, Cappuccino Crunch, Chocolate Chip Cookie Dough, Coconut Chocolate Almond, Cookies N’ Cream, Cotton Candy, Dark Chocolate Raspberry Truffle, Green Mint Chip, 
+          Lil Blue Panda, Maple Walnut, Midnight Caramel River, Moose Tracks, Peanut Butter, Peanut Butter Caramel Cookie Dough, Peanut Butter Cup, Road Runner Raspberry, Strawberry Cheesecake, Superman, Tipsy Peach, White House Cherry
+          <br>*Dairy Free: Super Berry Acai
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Soft Serve</div>
+        <div class="item-desc">Vanilla, Chocolate, Twist</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">River Bend Twist</div>
+        <div class="item-desc">Twist our soft serve into your favorite flavor from our available flavors!</div>
+        <div class="item-desc">
+          Apple Pie, Banana, Birthday Cake, Black Berry, Black Cherry, Black Raspberry, Blue Raspberry, Blueberry, Bubble Gum, Butter Pecan, Butterscotch, Cake Batter, Candy, Cantaloupe, Caramel, Cheesecake, Chocolate Jalapeno, Cinnamon, Coconut, Cotton Candy, Crème De Menthe, English Toffee, Fruity Chill, Grape, Guava, Hazelnut, Kahlua, Key Lime Pie, Lemon Drop Chill, Licorice, Mango Tango Chill, Maple, Orange, Peach, Peanut Butter, Pina Colada, Pink Cotton Candy, Pistachio, Pumpkin Pie, Raspberry Cheesecake, Red Velvet Cake, Root Beer, S’Mores, Salted Caramel, Strawberry, Teaberry, Tropical Pineapple, Tutti Fruiti Blue, Watermelon, Wild Cherry
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Kinzua Icy Nachos</div>
+        <div class="item-desc">Our Tasty Soft-serve, served with waffle 'cone' chips</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">The Avenue Milkshake</div>
+        <div class="item-desc">Hershey Ice Cream, toppings, whipped cream, cherry</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Sasquatch's Favorite Float</div>
+        <div class="item-desc">Soft serve with any fountain drink (16oz)</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Dock 9 Sundae</div>
+        <div class="item-desc">Soft serve, one topping, whipped cream, cherry</div>
+        <div class="item-desc">
+          Sundae Toppings: Butterscotch Sauce, Caramel Sauce, Hershey’s Chocolate Sauce, Hot Fudge Sauce, Peanut Butter Sauce, Pineapple Sauce, Strawberry Sauce and assorted sprinkle-on toppings available.
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-name">Lake Effect Flurries</div>
+        <div class="item-desc">Small / Large — mix-ins: Heath, Toffee, Kit-Kat, M&amp;M's, Reese's Pieces, Butterfinger, Oreo, Cookie Dough, Peanut Butter Cup, and more</div>
+      </div>
+
+    </div>
+  </div>
+</details>
+</section>
+
+
 <section id="order">
   <h2>Order Online</h2>
-  <p id="order-desc">
+<!--  <p id="order-desc">
     <strong>
       Place your order directly through our secure online ordering system. Orders go straight to our kitchen via our Point of Sales System — fresh, fast, and ready when you arrive.
-    </strong>
+    </strong>-->
   </p>
-<!--  <div style="border:1px solid #23304d; border-radius:8px; overflow:hidden; max-width:100%; height:800px; background:#fff;">
+<!--  DISABLED
+<div style="border:1px solid #23304d; border-radius:8px; overflow:hidden; max-width:100%; height:800px; background:#fff;">
     <iframe 
       src="https://orderstart.com/dock9" 
       style="width:100%; height:100%; border:0;" 
@@ -129,12 +493,10 @@
 </h3>
 
 <p style="margin-top:1rem; text-align:center;">
-  <a href="#order" target="_blank" rel="noopener" class="btn">
+  <button class="btn" disabled>
     Start Your Order
-  </a>
+  </button>
 </p>
-</section>
-
 
   <section id="river-cam" style="padding: 2rem 1rem; max-width: 960px; margin: 0 auto;">
     <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">Our River View</h2>
@@ -158,6 +520,11 @@
 </main>
 
 <footer role="contentinfo">
+<p id="last-updated"></p>
+<script>
+  document.getElementById("last-updated").textContent =
+    "Last updated: " + lastEditDate;
+</script>
   &copy; 2025 Dock 9 – Warren, PA
 </footer>
 
