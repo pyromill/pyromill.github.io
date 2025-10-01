@@ -3,7 +3,7 @@
 <head>
 <script>
   // Edit date when editing file
-  const lastEditDate = "8:42 AM 10/1/2025";
+  const lastEditDate = "3:01 PM AM 10/1/2025";
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,13 @@
   <meta name="theme-color" content="#0f172a">
 
   <style>
+.menu-instructions {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #444;
+    font-style: italic;
+}
+
     /* Base layout */
 body {
   margin: 0;
@@ -172,24 +179,30 @@ body::before {
 
   <section id="menu">
     <h2>Our Menu</h2>
+	<p class="menu-instructions">Click the arrows below to expand each section of the menu.</p>
 
     <!-- Appetizers -->
-    <details>
+    <details open>
       <summary>Appetizers</summary>
       <div class="card">
         <h3>Appetizers</h3>
         <div class="menu-category">
-          <div class="menu-item"><div class="item-name">Street Corn Dip</div><div class="item-desc">Char‑grilled sweet corn, cream cheese, cheddar, spices, tortilla chips</div></div>
-          <div class="menu-item"><div class="item-name">Jumbo Brewhouse Pretzel</div><div class="item-desc">Served with beer cheese and mustard</div></div>
-          <div class="menu-item"><div class="item-name">Hot Pepper Cheese Balls</div><div class="item-desc">With ranch</div></div>
-          <div class="menu-item"><div class="item-name">Fried Pickle Spears</div><div class="item-desc">Choice of sauce</div></div>
-          <div class="menu-item"><div class="item-name">Jalapeño Poppers</div><div class="item-desc">Choice of sauce</div></div>
-          <div class="menu-item"><div class="item-name">Fried Banana Pepper Rings</div><div class="item-desc">Choice of sauce</div></div>
-          <div class="menu-item"><div class="item-name">Polish Wings</div><div class="item-desc">Flash Fried Pierogies tossed in your sauce</div></div>
-          <div class="menu-item"><div class="item-name">Southwest Artichoke Dip</div><div class="item-desc">Cream cheese, artichoke hearts, southwest spices, tortilla chips</div></div>
-          <div class="menu-item"><div class="item-name">Chicken Lips</div><div class="item-desc">Boneless chicken: dry ranch, cajun, salt &amp; vinegar, BBQ, garlic parm, hot buffalo, Nashville hot</div></div>
-          <div class="menu-item"><div class="item-name">Chicken Lips (3) &amp; Small Fries</div></div>
-          <div class="menu-item"><div class="item-name">Hot Honey Chicken Lips</div><div class="item-desc">Nashville hot, hot honey drizzle, fried onions</div></div>
+          <div class="menu-item"><div class="item-name">Street Corn Dip</div><div class="item-desc">Char‑grilled sweet corn, cream cheese, cheddar cheese and Jalapenos, Topped with tajin and grated parmesan. Served with tortilla chips</div></div>
+          <div class="menu-item"><div class="item-name">Jumbo Brewhouse Pretzel</div><div class="item-desc">Served with beer cheese and brew pub mustard</div></div>
+		  <div class="menu-item"><div class="item-name">Breaded Provolone Wedges</div><div class="item-desc">Lightly breaded, flash fried, served with house red.</div></div>
+          <div class="menu-item"><div class="item-name">Hot Pepper Cheese Balls</div><div class="item-desc">Served with sauce of your choice.</div></div>
+		  <div class="menu-item"><div class="item-name">Hot Honey Onion Rings</div><div class="item-desc">Breaded steakhouse onion rings, drizzled with hot honey and topped with crumbled bacon</div></div>
+          <div class="menu-item"><div class="item-name">Fried Pickle Spears</div><div class="item-desc">Served with sauce of your choice</div></div>
+          <div class="menu-item"><div class="item-name">Jalapeño Poppers</div><div class="item-desc">Stuffed with cream cheese, served with sauce of your choice.</div></div>
+          <div class="menu-item"><div class="item-name">Fried Banana Pepper Rings</div><div class="item-desc">Served with sauce of your choice.</div></div>
+          <div class="menu-item"><div class="item-name">Polish Wings</div><div class="item-desc">Flash Fried Pierogies tossed in your choice of sauce</div></div>
+		  <div class="menu-item"><div class="item-name">Spinach Artichoke Dip</div><div class="item-desc">Served with tortilla chips.</div></div>
+          <div class="menu-item"><div class="item-name">Freshly Fried Chip Basket</div><div class="item-desc">Traditional, Dry Ranch, Cajun, Salt & Vinegar or Dry BBQ Seasoning</div></div>
+          <div class="menu-item"><div class="item-name">Chicken Lips</div>
+		  <div class="item-desc">Small or Large order, Tossed in your choice of sauce
+		  Sauces: Buffalo, BBQ, Garlic Parm, Hot Honey, Nashville hot. Dry rub: Salt & Vinegar, Dry Ranch, Cajun</div></div>
+          <div class="menu-item"><div class="item-name">Chicken Tenders and Fries</div></div>
+          <div class="item-desc">Toss in sauce of choice for a 1.00 more</div></div>
         </div>
       </div>
     </details>
@@ -200,14 +213,14 @@ body::before {
       <div class="card">
         <h3>Specialty Pizzas</h3>
         <div class="menu-category">
-          <div class="menu-item"><div class="item-name">Classic Margherita</div><div class="item-desc">Fresh red sauce, fresh mozzarella, fresh basil</div></div>
-          <div class="menu-item"><div class="item-name">Back Deck BBQ</div><div class="item-desc">Red onion, cheddar, tangy BBQ, diced grilled chicken, fresh mozzarella</div></div>
-          <div class="menu-item"><div class="item-name">Sweet &amp; Spicy</div><div class="item-desc">Sweet chili sauce, red onion, cheddar, pepperoni, pickled hot honey drizzle</div></div>
-          <div class="menu-item"><div class="item-name">Cali White</div><div class="item-desc">Garlic cream sauce, mozzarella, tomatoes, grilled chicken, fresh basil</div></div>
-          <div class="menu-item"><div class="item-name">Rubens</div><div class="item-desc">Garlic cream sauce, sauerkraut, mozzarella, pastrami</div></div>
-          <div class="menu-item"><div class="item-name">PBR</div><div class="item-desc">Garlic cream sauce, cheddar, mozzarella, pickles, pastrami</div></div>
-          <div class="menu-item"><div class="item-name">Buffalo Chicken</div><div class="item-desc">Garlic cream or blue cheese base, mozzarella, cheddar, grilled chicken, buffalo sauce drizzle</div></div>
-          <div class="menu-item"><div class="item-name">GF Veggie Flatbread</div><div class="item-desc">Garlic cream or red sauce, spinach, onions, tomatoes, olives, mushrooms, mozzarella</div></div>
+          <div class="menu-item"><div class="item-name">Classic Margherita</div><div class="item-desc">Fresh mozzarella, Fresh basil and House Red Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Back Deck BBQ</div><div class="item-desc">Pulled Smoked Pork, Sweet and Tangy BBQ, Diced Red Onion and Mozzarella Cheese</div></div>
+          <div class="menu-item"><div class="item-name">Sweet & Spicy</div><div class="item-desc">House Red, Mozzarella, Cup & Char Pepperoni, Whipped Ricotta, Hot Honey Drizzle</div></div>
+          <div class="menu-item"><div class="item-name">Cali White</div><div class="item-desc">Basil Pesto Base, Mozzarella, Tomatoes, Grilled Chicken, Fresh Basil and Red Onion</div></div>
+          <div class="menu-item"><div class="item-name">Ruben</div><div class="item-desc">Sliced Corned Beed, Melted Swiss, Kraut, 1,000 Island Base</div></div>
+          <div class="menu-item"><div class="item-name">PBR</div><div class="item-desc">Ranch Base, Mozzarella, Dill Pickles, Crumbled Bacon</div></div>
+          <div class="menu-item"><div class="item-name">Buffalo Chicken</div><div class="item-desc">Choice of Ranch or Blue Cheese Base, Chicken, Hot Sauce and Mozzarella</div></div>
+          <div class="menu-item"><div class="item-name">GF Veggie Flatbread</div><div class="item-desc">Cauliflower Crust, Red Sauce, Spinach, Red Onion, Peppers, Black Olives and Mozzarella</div></div>
         </div>
       </div>
     </details>
@@ -218,10 +231,10 @@ body::before {
       <div class="card">
         <h3>Build Your Own Pizza</h3>
         <div class="menu-category">
-          <div class="menu-item"><div class="item-name">Base Options</div><div class="item-desc">Red sauce, Pesto, Garlic cream</div></div>
-          <div class="menu-item"><div class="item-name">Cheese Options</div><div class="item-desc">Shredded, Mozzarella</div></div>
-          <div class="menu-item"><div class="item-name">Proteins</div><div class="item-desc">Grilled chicken, Pastrami, Pepperoni, Bacon, Italian Sausage, Pulled Pork, Ham, Smoked Pulled Pork, Sausage</div></div>
-          <div class="menu-item"><div class="item-name">Veggies</div><div class="item-desc">Red onion, Spinach, Mushrooms, Pickles, Tomatoes, Olives, Sauerkraut, Jalapeños</div></div>
+          <div class="menu-item"><div class="item-name">Base Options</div><div class="item-desc">Red Sauce, Pesto, BBQ</div></div>
+          <div class="menu-item"><div class="item-name">Cheese Options</div><div class="item-desc">Shredded Mozzarella</div></div>
+          <div class="menu-item"><div class="item-name">Proteins</div><div class="item-desc">Cup n Char Pepperoni, Sausage, Crumbled Bacon, Grilled Chicken, Ham, Pulled Pork</div></div>
+          <div class="menu-item"><div class="item-name">Veggies</div><div class="item-desc">Red Onions, Bell Peppers, Mushrooms, Black Olives, Diced Tomatoes, Banana Peppers, Fresh Spinach</div></div>
         </div>
       </div>
     </details>
@@ -232,14 +245,14 @@ body::before {
       <div class="card">
         <h3>Smash Burgers</h3>
         <div class="menu-category">
-          <div class="menu-item"><div class="item-name">The Dock</div><div class="item-desc">Bacon patties, American cheese, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-          <div class="menu-item"><div class="item-name">Allegheny National Forage (ANF)</div><div class="item-desc">Bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-          <div class="menu-item"><div class="item-name">Conneaut Crunch</div><div class="item-desc">Bacon patties, cheddar cheese, fried banana peppers, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-          <div class="menu-item"><div class="item-name">Kinzua Kick</div><div class="item-desc">Bacon patties, cheddar cheese, Nashville hot chicken lip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-          <div class="menu-item"><div class="item-name">Southern Comfort</div><div class="item-desc">Bacon patties, cheddar cheese, fried pickle spears, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-          <div class="menu-item"><div class="item-name">Street Corn Quesadilla Burger</div><div class="item-desc">Bacon patties, cheddar cheese, street corn dip, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-          <div class="menu-item"><div class="item-name">The Lumberjack</div><div class="item-desc">Bacon patties, cheddar cheese, fried egg, lettuce, tomato, onion, pickle, Dock sauce</div></div>
-          <div class="menu-item"><div class="item-name">The Bridge Buster</div><div class="item-desc">Three bacon patties, cheddar cheese, lettuce, tomato, onion, pickle, Dock sauce</div></div>
+          <div class="menu-item"><div class="item-name">The Dock</div><div class="item-desc">American Cheese, Shredded Lettuce, Sliced Tomato, Sliced Onion, Dill Pickles and Dock Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Allegheny National Forage (ANF)</div><div class="item-desc">Grilled Mushrooms, Melted Swiss Cheese and A Signature Mushroom Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Conewango Crunch</div><div class="item-desc">Crispy Bacon, Breaded Onion Ring, Melted Cheddar Cheese, Cream Cheese and A Sweet and Tangy BBQ Sauce</div></div>
+          <div class="menu-item"><div class="item-name">Kinzua Kick</div><div class="item-desc">Southwest Seasoned Beef, Pickled Jalapeno, Hot Pepper Cheese, Cream Cheese, Sweet and Smokey Bacon Jam</div></div>
+          <div class="menu-item"><div class="item-name">Street Corn Quesadilla Burger</div><div class="item-desc">Southwest Seasoned Black Bean Burger, Shredded Lettuce, Sliced Tomato, Mexican Corn Dip, Cheddar Cheese, Wrapped in a Grilled Flour Tortilla</div></div>
+   		  <div class="menu-item"><div class="item-name">The Trussel Melt</div><div class="item-desc">Two Smash Patties, Topped with Caramelized Onions, Melted Cheddar Cheese and 1,000 Island on a Grilled Marble Rye</div></div>
+          <div class="menu-item"><div class="item-name">The Lumberjack Jammer</div><div class="item-desc">Smash Patties, Sliced Smoked Brisket, Cheddar Cheese, Bacon Jam, Dill Pickle Slices, Toasted Brioche Roll</div></div>
+          <div class="menu-item"><div class="item-name">The Bridge Buster</div><div class="item-desc">Smash Patties, Mac N Cheese, Between Two Grilled Cheese Sandwiches</div></div>
         </div>
       </div>
     </details>
@@ -248,19 +261,33 @@ body::before {
     <details>
       <summary>Paninis & More</summary>
       <div class="card">
-        <h3>Paninis &amp; More</h3>
+        <h3>Paninis & More</h3>
         <p>Served with house fried chips. Upgrade: fries +$1.00 • onion rings +$1.75 • side salad +$2.00</p>
         <div class="menu-category">
           <div class="menu-item"><div class="item-name">Ultimate Grilled Cheese</div></div>
+		  <div class="item-desc"></div>Melted American Cheese, Crispy Chicken Tender, Bacon, Smoked Pulled Pork, BBQ Sauce on Grilled Sourdough</div>
           <div class="menu-item"><div class="item-name">Chicken Bacon Ranch</div></div>
-          <div class="menu-item"><div class="item-name">Brisket Cheesesteak</div></div>
-          <div class="menu-item"><div class="item-name">Club 3</div></div>
-          <div class="menu-item"><div class="item-name">Reuben</div></div>
-          <div class="menu-item"><div class="item-name">Battered Fish Wrap</div></div>
-          <div class="menu-item"><div class="item-name">Caprese Panini</div></div>
-          <div class="menu-item"><div class="item-name">Nashville Hot Chicken Wrap</div></div>
-          <div class="menu-item"><div class="item-name">Southwest Veggie Wrap</div></div>
+		  <div class="item-desc"></div>Grilled Chicken, House Made Ranch, Crisp Bacon, Tomato, Sliced Red Onion, Mozzarella on a Pressed Ciabatta Roll</div>
+          <div class="menu-item"><div class="item-name">Cuban</div></div>
+          <div class="item-desc"></div>Sliced Ham, Smoked Pork, Swiss Cheese, Dill Pickles, Raspberry Honey Mustard On Grilled Sourdough</div>
+		  <div class="menu-item"><div class="item-name">Brisket Cheesesteak</div></div>
+          <div class="item-desc">Sliced Smoked Brisket, Grilled Bell Peppers & Onions, Melty Cheese On a Pressed Ciabatta Roll.</div></div>
+		  <div class="menu-item"><div class="item-name">Club</div></div>
+          <div class="item-desc">Sliced Ham, Sliced Turkey, Crispy Bacon, Lettuce, Tomato, Homemade Basil Pesto Mayo On Pressed Ciabatta Roll or ask for a Flour Tortilla</div></div>
+		  <div class="menu-item"><div class="item-name">Reuben</div></div>
+          <div class="item-desc">Thin SLiced Corned Beef, Melted Swiss Cheese, Tangy Kraut and 1,000 Island On Grilled Marble Rye Ask to make it a Rachell with Turkey!</div></div>
+		  <div class="menu-item"><div class="item-name">Battered Fish Wrap</div></div>
+          <div class="item-desc"></div>Bredded Pollock, Broccoli Power Slaw, Mandarin Sesame Vinaigrette, Wrapped in a Jumbo Tortilla</div>
+		  <div class="menu-item"><div class="item-name">Caprese Panini</div></div>
+          <div class="item-desc">Fresh Mozzarella, Basil Pesto, Tomato On Grilled Sourdough</div></div>
+		  <div class="menu-item"><div class="item-name">Nashville Hot Chicken Wrap</div></div>
+          <div class="item-desc">Breaded Chicken Breast Tossed in Nashville Style Hot Sauce, Shredded Lettuce, Sliced Tomato and Dill Pickles on a Grilled Brioche Roll</div></div>
+		  <div class="menu-item"><div class="item-name">Grilled Veggie Wrap</div></div>
+		  <div class="item-desc">Madarin Sesame Broccoli Slaw, Shredded Lettuce, Diced Tomato, Sliced Onion Wrapped in a Jumbo Tortilla</div></div>
+		  <div class="menu-item"><div class="item-name">Italian</div></div>
+		  <div class="item-desc"></div>Sliced Ham, Salami, Pepperoni, Provolone Cheese, Shredded Lettuce, Sliced Tomatoes,Basil Pesto Mayo on a Pressed Ciabatta Roll</div>
         </div>
+		
       </div>
     </details>
 
@@ -273,7 +300,8 @@ body::before {
           <div class="menu-item"><div class="item-name">House Fried Chips</div></div>
           <div class="menu-item"><div class="item-name">Fries</div></div>
           <div class="menu-item"><div class="item-name">Onion Rings</div></div>
-          <div class="menu-item"><div class="item-name">Side Salad</div></div>
+          <div class="menu-item"><div class="item-name">Side Salad</div></div><div>
+		  <div class="menu-item"><div class="item-name">Mac n Cheese</div></div><div>
         </div>
       </div>
     </details>
@@ -283,12 +311,12 @@ body::before {
       <summary>Kid's Kove</summary>
       <div class="card">
         <h3>Kid's Kove</h3>
-        <p>All kids’ meals are served with fries and a drink.</p>
+        <p>All kids’ meals are served with fries, drink and a kid's Soft Serve.</p>
         <div class="menu-category">
           <div class="menu-item"><div class="item-name">Chicken Tenders (2)</div></div>
           <div class="menu-item"><div class="item-name">Grilled Cheese</div></div>
-          <div class="menu-item"><div class="item-name">Cheeseburger</div></div>
-          <div class="menu-item"><div class="item-name">1/4 lb. Burger w/ American Cheese</div></div>
+          <div class="menu-item"><div class="item-name">White Cheddar Mac n Cheese</div></div>
+          <div class="menu-item"><div class="item-name">Jr. Smash Burger w/ American Cheese</div></div>
         </div>
       </div>
     </details>
