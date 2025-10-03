@@ -3,7 +3,7 @@
 <head>
 <script>
   // Edit date when editing file
-  const lastEditDate = "1:41 PM 10/3/2025";
+  const lastEditDate = "2:10 PM 10/3/2025";
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -136,6 +136,14 @@ body::before {
       .hero h1 { font-size: 1.6rem; }
       .hero .tagline { font-size: 1rem; }
     }
+/* specials to frame container*/
+.specials-img {
+  max-width: 35%;
+  height: auto;
+  border: 0;
+  display: block;
+  margin: 0 auto; /* centers it */
+}
 
     /* River cam wrapper fix */
     .river-cam-wrapper {
@@ -181,6 +189,7 @@ body::before {
       <a href="index.html">Home</a>
       <a href="newmenu.html">Menu</a>
       <a href="#order">Order</a>
+	  <a href="#specials">Special's</a>
       <a href="#visit">Visit</a>
       <a href="#river-cam">Webcam</a>
     </div>
@@ -196,6 +205,13 @@ body::before {
       </p>
     </div>
   </section>
+
+</main>
+
+<section id="specials">
+  <h2>Check out our current monthly specials!</h2>
+  <img src="img/oct-specials.jpg" alt="October Specials" class="specials-img">
+</section>
 
   <section id="menu">
     <h2>Our Menu</h2>
