@@ -3,7 +3,7 @@
 <head>
 <script>
   // Edit date when editing file
-  const lastEditDate = "2:16 PM 10/3/2025";
+  const lastEditDate = "2:36 PM 10/3/2025";
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -138,12 +138,21 @@ body::before {
     }
 /* specials to frame container*/
 .specials-img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
-  border: 0;
   display: block;
-  margin: 0 auto; /* centers it */
+  margin: 0 auto 1rem;
 }
+
+.specials-list {
+  list-style: none;
+  padding: 0;
+}
+
+.specials-list li {
+  margin: 0.5rem 0;
+}
+
 
     /* River cam wrapper fix */
     .river-cam-wrapper {
@@ -173,6 +182,20 @@ body::before {
   text-align: center;    /* ensures multi-line text is centered */
   margin-bottom: .75rem;
 }
+
+/* hidden class for seo screen readers*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* prevent line breaks */
+  border: 0;
+}
+
 
     .item-name { font-weight:600; }
     .price { color:#0ea5a4; font-weight:700; }
@@ -209,9 +232,32 @@ body::before {
 </main>
 
 <section id="specials">
+  <h2>Check out our current monthly specials!</h2>
+
+  <!-- Poster image with concise alt text -->
+  <img src="img/oct-specials.jpg"
+       alt="specials poster with Halloween theme"
+       class="specials-img">
+
+  <!-- Accessibllity text version of the specials -->
+  <ul class="visually-hidden">
+    <li><strong>MEGA Milkshake Monday:</strong> 50% off all milkshakes</li>
+    <li><strong>Apps & Dessert Tuesday:</strong> 25% off appetizers and non‑ice cream desserts</li>
+    <li><strong>Whacky Wednesday:</strong> 50% off ice cream with any entrée</li>
+    <li><strong>Turbo Thursday:</strong> 25% off any beverage with any entrée</li>
+    <li><strong>Freaky Friday:</strong> Add an extra topping to your pizza at no extra charge</li>
+    <li><strong>Weekend Bonanza:</strong> Any pizza, large chicken lips, and 2 fountain drinks for $25</li>
+  </ul>
+
+  <p class="visually-hidden">
+    Ask your server for today’s flavor or topping of the day!
+  </p>
+</section>
+
+<!--<section id="specials">
   <h2>Check out our current specials!</h2>
   <img src="img/oct-specials.jpg" alt="October Specials" class="specials-img">
-</section>
+</section> -->
 
   <section id="menu">
     <h2>Our Menu</h2>
